@@ -4,13 +4,13 @@ public class Card{
    
    public Card(){}
    
-   public Card(int value, int face){
-      this.value = value;
+   public Card(int face, int value){
       this.face = face;
+      this.value = value;
    }
-   public void setCard(int value, int face){
-      this.value = value;
+   public void setCard(int face, int value){
       this.face = face;
+      this.value = value;
    }
    public int getVal(){
       return this.value;
@@ -20,4 +20,7 @@ public class Card{
       return this.face;
 
    }
+   
+   
+   
 }
