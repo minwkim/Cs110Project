@@ -34,7 +34,7 @@ public class Game{
       }
    }
    
-   
+   //The Game Itself
    System.out.println("Want to play a Game?");
    input = keyboard.nextLine();
    
@@ -45,7 +45,7 @@ public class Game{
       System.out.println("Well then, lets play");
       input = "fight";
       while (playerOne.peek() != null && playerTwo.peek() != null && input.equals("fight")){
-         
+         //Setting Card Values(flipping)
          if (playerOne.peek() != null){
             tempOne = playerOne.poll();
             System.out.println(tempOne.getVal());
@@ -56,7 +56,7 @@ public class Game{
             System.out.println(tempTwo.getVal());
             pile.add(tempTwo);
          }
-         
+         //Round Conditions
          if (tempOne.getVal() > tempTwo.getVal()){
             System.out.println("You win this round");
             while (pile.peek() != null){
@@ -69,6 +69,8 @@ public class Game{
                playerTwo.add(pile.poll());
             }
          }
+         
+         //*********************WAAAAAAAAAAAAARRRRRRRRRRRRRRRRRRRR****************************
          if (tempOne.getVal() == tempTwo.getVal()){
             System.out.println("WAR!");
             while(tempOne.getVal() == tempTwo.getVal()){
@@ -104,6 +106,8 @@ public class Game{
             
             }
          }
+         
+         //**************ENNNDDDDDDDD OFFFFF WAAAAAAAAARRRRRRRRRRRRR****************
          input = keyboard.nextLine();
       }
       
